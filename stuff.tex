@@ -19,11 +19,17 @@
 Hvis $G$ er en gruppe under operationen $\cdot$, så gælder
 \begin{enumerate}
 \item Identiten af $G$ er unik
-\item $\forall{a} \in G, a^{-1}$ er entydigt bestemt?
+\item $\forall{a} \in G, a^{-1}$ er entydigt bestemt
 \item $\{ \forall{a} \in G | (a^{-1})^{-1} = a\}$
 \item $(a \cdot b)^{-1} = (b^{-1}) \cdot (a^{-1})$
 \item Assosiativ
 \end{enumerate}
+
+\section*{Bijektiv, surjektiv}
+\subsection*{Bijektion}
+"A bijection (or bijective function or one-to-one correspondence) is a function between the elements of two sets, where every element of one set is paired with exactly one element of the other set, and every element of the other set is paired with exactly one element of the first set."\\
+Wiki.
+\subsection*{Bijektion}
 
 \section*{Permutationer}
 \textbf{def.}\\
@@ -125,7 +131,7 @@ $x \in G$, så $G = \{ x^n | n \in \mathbb{Z} \}$
 Engelsk: \textit{coset}.\\
 
 \section*{Isomorfi}
-1. isomorfi sætning
+1. isomorfi sætning\\
 $G, H$ er grupper, $\phi : G \to H$ er en homomorfi.
 \begin{enumerate}
   \item $Ker(\phi) \triangleleft G$
@@ -133,7 +139,7 @@ $G, H$ er grupper, $\phi : G \to H$ er en homomorfi.
   \item $Im(\phi) = \phi(G) \cong G / Ker(\phi)$
 \end{enumerate}
 
-2. isomorfi sætning
+2. isomorfi sætning\\
 $A, B$ er grupper. $A, B \neq G$. $A \neq N_G(B)$. Da er
 \begin{enumerate}
   \item $AB \leq G$
@@ -142,7 +148,20 @@ $A, B$ er grupper. $A, B \neq G$. $A \neq N_G(B)$. Da er
   \item $A \mid (A \cap B) \cong AB/B$
 \end{enumerate}
 
+3. isomorfi sætning\\
 
+4. isomorfi sætning.\\
+$G$ gruppe, $N \triangleleft G$. $\overline{G} := G / N$. $\pi : G \to G / N$ kanonisk homomorfi. $\pi(g) := g N$ (Natural projection).\\
+For $U \leq G$ defineres $\overline{U} := \pi(U)$ er en undergruppe af $\overline{G} = G / N$.\\
+For $V \leq G$ $\pi^{-1}(v) := \{ g \in G | \pi(g) \in V\}$. Urbilledet af $V$ under $\pi$. Da er $\pi^{-1}(V)$ er en undergruppe af $G$ indeholdende $N$.
 
+\section*{Endnu ikke placeret}
+\begin{enumerate}
+  \item $A \leq B \iff \overline{A} \leq \overline{B}$
+  \item $A \leq B \Rightarrow [B:A] = [\overline{B}:\overline{A}]$
+  \item $\overline{<A, B>} = <\overline{A}, \overline{b}>$
+  \item $\overline{A \cap B} = \overline{A} \cap \overline{B}$
+  \item $A \triangleleft G \iff \overline{A} \triangleleft \overline{G} = G / N$
+\end{enumerate}
 
 \end{document}
