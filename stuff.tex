@@ -1,0 +1,148 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{stmaryrd}
+\usepackage{fancyhdr}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pgf}
+\usepackage{enumerate}
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata}
+
+\begin{document}
+
+\section*{Grupper}
+\textbf{def.}\\
+Hvis $G$ er en gruppe under operationen $\cdot$, så gælder
+\begin{enumerate}
+\item Identiten af $G$ er unik
+\item $\forall{a} \in G, a^{-1}$ er entydigt bestemt?
+\item $\{ \forall{a} \in G | (a^{-1})^{-1} = a\}$
+\item $(a \cdot b)^{-1} = (b^{-1}) \cdot (a^{-1})$
+\item Assosiativ
+\end{enumerate}
+
+\section*{Permutationer}
+\textbf{def.}\\
+En permutation af et sæt $A$ er en bijektion fra $A$ til sig selv.\\
+$S_n$ er en symmetrisk gruppe af grad $n$.
+
+\section*{Legemer}
+
+
+\section*{Undergrupper}
+\textbf{def.}\\
+$G$ gruppe. En delmængde $H$ af $G$ kaldes en undergruppe af $G$ skrives $h \leq G$, hvis $H \neq \emptyset$ og $H$ stabil under komposition og inversdannelse.
+\begin{enumerate}
+  \item $\forall{x, y} \in H : xg \in H$
+  \item $\forall{x} \in H : x^{-1} \in H$
+\end{enumerate}
+Hvis $H \leq G$ da er $H$ selv gruppe med komposition fra $G$. Da $H \neq \emptyset$, findes $x \in H$.
+\begin{enumerate}
+  \item $x^{-1} \in H$
+  \item $1 = x x^{-1} \in H$
+\end{enumerate}
+\textbf{prop.}\\
+$G$ er en gruppe. $H \subset G$. Da er $H \leq G$ hvis og kun hvis:
+\begin{enumerate}
+  \item $H \neq \emptyset$
+  \item $\forall{x, y} \in H : x y^{-1} \in H$
+\end{enumerate}
+Hvis $H \neq \emptyset$ er endelig, da er det tilstrækkeligt at $H$ er stabil under komposition.
+
+\textbf{Sætning} \textit{Lagranges}\\
+$G$ endelig, $G \leq G$. Da er $|H| | |G|$, og $\frac{|G|}{|H|}$ er antallet af sideklasser af $H$ i $G$.
+
+\textbf{Def.}\\
+$G$ gruppe, $H \leq G$. Index af $H$ i $G$ $[G:H]$ antal venstresideklasser af $H$ i $G$.\\
+Hvis $G$ er endelig: $|G| = |H| [G:H]$ \textit{(Lagranges)}.
+
+\textbf{Sætning} \textit{Cancley}\\
+$G$ endelige gruppe, p primtal med $p \mid |G|$.\\
+Da har $G$ element af orden $p$ (og dermed også en undergruppe af orden $p$).
+
+\textbf{Sætning} \textit{Sylow}\\
+$G$ endelig gruppe, $p$ primtal, $|G| = P^a \cdot m$, $p \nmid m$.\\
+Da findes undergruppe af orden $p^a$ (såkaldt $p$-Sylowgruppe).\\
+
+\textbf{Prop.}\\
+$G$ endelig, $H, K \leq G$. Da er $|HK| = \frac{|H||K|}{|H \cap K|}$.
+
+\section*{Normale undergrupper}
+\textbf{Def.}\\
+G gruppe, $H \leq G$, venstre- og højresideklasse af $H$ i $G$:\\
+For $g \in G$\\
+$gH := \{ gh \in H\}$\\
+$Hg := \{ hg \in H\}$\\
+\textbf{Def.}\\
+$N \leq G$ kaldes normal, skrives $N \trianglelefteq G$,\\
+hvis : $\forall{g \in G} : gNg^{-1} = \{ gng^{-1} | n \in N\} = N$\\
+\textbf{Prop.}\\
+Lad $n \leq G$. Da er følgende betingelser ækvivalente:
+\begin{enumerate}
+  \item $N \trianglelefteq G$
+  \item $N_G(N) = G$
+  \item $\forall{g \in G} : gN = Ng$
+  \item $\forall{g \in G} : gNg^{-1} \subset N$
+\end{enumerate}
+
+\textbf{Sætning}\\
+$G$ gruppe, $N \trianglelefteq G$. Da er afb. :
+$\phi : G \to G/N$, givet ved\\
+$\phi(g) := gN \in G/N$ er injektiv homomorfi med kerne $N$.\\
+$\phi :$ den kanoniske homorfi (af $G$ på $G/N$).
+Bog kalder det $Natural projection$.\\
+
+\section*{Kvotient grupper}
+
+\section*{Kerner}
+$C_G$
+\section*{Centre}
+
+\begin{align*}
+  Z(G) &:= \{ g \in G | \forall h \in G : g h g^{-1} = h \}\\
+  &= \{ g \in G | \forall h \in G : gh = hg \} \leq G
+\end{align*}
+\section*{Stabilisator}
+\textbf{def.}\\
+Hvis $A \subset G$ og $g \in G$, defineres:\\
+$$g A g^{-1} = \{ g a g^{-1} | a \in A\}$$
+konjugeret med A.
+\section*{Normalisatoren}
+\textbf{def.}\\
+$G$ gruppe, $A \subset G$. Normalisatoren af $A$ er:\\
+$$N_G(A) = \{ g \in G | g A g^{-1} = A\} \leq G$$
+
+\section*{Cykliske grupper}
+\textbf{def.}\\
+Gruppe $G$ kaldes cyklisk, hvis der findes
+$x \in G$, så $G = \{ x^n | n \in \mathbb{Z} \}$
+
+\section*{Sideklasser}
+Engelsk: \textit{coset}.\\
+
+\section*{Isomorfi}
+1. isomorfi sætning
+$G, H$ er grupper, $\phi : G \to H$ er en homomorfi.
+\begin{enumerate}
+  \item $Ker(\phi) \triangleleft G$
+  \item $Im(\phi) \leq H$
+  \item $Im(\phi) = \phi(G) \cong G / Ker(\phi)$
+\end{enumerate}
+
+2. isomorfi sætning
+$A, B$ er grupper. $A, B \neq G$. $A \neq N_G(B)$. Da er
+\begin{enumerate}
+  \item $AB \leq G$
+  \item $B \triangleleft AB$
+  \item $A \cap B \triangleleft A$
+  \item $A \mid (A \cap B) \cong AB/B$
+\end{enumerate}
+
+
+
+
+\end{document}
