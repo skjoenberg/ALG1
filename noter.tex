@@ -49,9 +49,11 @@ Et element har orden $1$, hvis og kun hvis det er identitetselementet.
   ub &= vb, \text{ så gælder } u = v
 \end{align*}
 \subsection*{Generatorer}
-
+Generatoren for en gruppe er en delmængde, givet ved, at alle elementer i gruppen kan blive udtrykt ved en endelig kombination (under gruppeoperationen) af elementerne (og deres inverse) i delmængden.
 \subsection*{Symmetriske grupper}
-
+Lad $\Omega$ være en ikke-tom mængde og lad $S_{\Omega}$ være en mængde af alle bijektioner fra $\Omega$ til sig selv. $S_{\Omega}$ kaldes den symmetriske gruppe af mængden $\Omega$. $S_{\Omega}$ indeholder alle permutationer af $\Omega$.\\
+I specialtilfældet $\Omega = \{ 1,2,3, \hdots, n \}$ skrives den symmetriske gruppe $S_n$.\\
+Ordenen af $|S_n| = n!$.
 \subsection*{Diedergruppen af orden 2n}
 Diedergruppen af orden $2n$ skrives $D_{2n}$.\\
 For alle $n \geq 3$, lad $D_{2n}$ være sættet af symmetrier af en $n$-gon.\\
@@ -59,8 +61,10 @@ Der findes to basale operationer på diedergruppen. Henholdsvis spejlinger $s$ o
 Alle elementer i diedergruppen kan beskrives ved $s^k r^i$, hvor $k = 0$ eller $1$ og $0 \leq i \leq n-1$.\\
 Ordenen af diedergruppen er $|D_{2n}| = 2n$.\\
 $r s = s r^{-1}$.\\
-$r^i s = s r^{-i}$.
+$r^i s = s r^{-i}$.\\
+Diedergruppen kan også beskrives ved generatoren: $D_{2n} = \langle r, s | r^n = s^2 = 1, rs = s r^{-1} \rangle$.
 \subsection*{Matrixgrupper}
+\subsection*{Den alternerende gruppe}
 \subsection*{Kvaterniongruppen Q8}
 \subsection*{Kleins 4-gruppe}
 2.5
@@ -68,8 +72,9 @@ $r^i s = s r^{-i}$.
 \subsection*{Isomorphier}
 \subsection*{Gruppevirkninger}
 
+
 \section*{Undergrupper}
-\subsection*{Def}
+\subsection*{Definition}
 \subsection*{Undergruppekriteriet}
 \subsection*{Centralisator}
 \subsection*{Normalisator}
@@ -86,8 +91,24 @@ $r^i s = s r^{-i}$.
 \section*{Kvotientgrupper}
 \subsection*{Kernen}
 \subsection*{Normale undergrupper}
+\textbf{Definition 2}:\\
+En undergruppe $N$ af $G$ kaldes normal, og vi skriver $N \trianglelefteq G$, hvis vi for alle $g \in G$ har, at\\
+$$gNg^{-1} := \{ gng^{-1} | n \in N \} = N.$$
 \subsection*{Sideklasser}
+\textbf{Definition 1}:\\
+Lad $H \leq G$. For $g \in G$ defineres venstresideklassen af $H$ i $G$:\\
+$$gH = \{ gh | h \in H \}.$$
+\textbf{Proposition 1}:\\
+For $u, v \in G$ haves $uH = vH$ hvis og kun hvis $v^{-1} u \in H$ hvis og kun hvis $u$ og $v$ begge er repræsentanter for samme venstresideklasse.\\
+Mængden af venstresideklasser i $G$ udgør en partition af $G$:\\
+$$G = \bigcup_{g \in G} gH.$$\\
+og for vilkårlige $u, v \in G$ gælder enten $uH \cap vH = \emptyset$ eller $uH = vH$.
 \subsection*{Kvotientgrupper}
+\textbf{Sætning 1}:\\
+Lad $N \trianglelefteq G$ og betraft mængden af venstresideklasser af $N$ i $G$. Denne mængde betegner vi $G / N$ (læses: "G module N"). På $G / N$ giver fastsættelsen
+$$uN \cdot vN := (uv)N$$
+for $u, v \in G$ en veldefineret komposition, og $G / N$ er en gruppe med denne komposition. Det neutrale element i $G / N$ er sideklassen $N$, og det inverse element til en sideklasse $gN$ er sideklassen $g^{-1} N$. $G / N$ med denne komposition kaldes kvotientgruppen eller gaktorgruppen af $G$ modulo $N$.\\
+
 \subsection*{Noget med konjugation}
 \subsection*{Lagrange}
 \subsection*{Isomorfisætninger}
