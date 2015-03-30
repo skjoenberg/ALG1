@@ -30,7 +30,7 @@
 \section*{Grupper}
 \subsection*{Definition}
 \begin{enumerate}
-  \item Lukket under multiplikation.
+  \item Lukket under komposition (gruppeoperationen).
   \item Assosiativ.
   \item Unikt identitetselement.
   \item Lukket under inversdannelse og hver invers er unik.
@@ -42,18 +42,13 @@ Ordenen af en gruppe $G$ er givet ved antallet af elementer i gruppen.\\
 Ordenen af et element $x \in G$ er givet ved det laveste heltal $n$, så $x^n = 1$ (hvor $1$ er identitetselementet).\\
 Et element har uendelig orden, hvis der ikke findes et $n$, som angivet ovenfor.\\
 Et element har orden $1$, hvis og kun hvis det er identitetselementet.
-
 \subsection*{Cancellation laws}
 \begin{align*}
-  au &= ua, \text{ så gælder } u = v\\
+  au &= av, \text{ så gælder } u = v\\
   ub &= vb, \text{ så gælder } u = v
 \end{align*}
 \subsection*{Generatorer}
 Generatoren for en gruppe er en delmængde, givet ved, at alle elementer i gruppen kan blive udtrykt ved en endelig kombination (under gruppeoperationen) af elementerne (og deres inverse) i delmængden.
-\subsection*{Symmetriske grupper}
-Lad $\Omega$ være en ikke-tom mængde og lad $S_{\Omega}$ være en mængde af alle bijektioner fra $\Omega$ til sig selv. $S_{\Omega}$ kaldes den symmetriske gruppe af mængden $\Omega$. $S_{\Omega}$ indeholder alle permutationer af $\Omega$.\\
-I specialtilfældet $\Omega = \{ 1,2,3, \hdots, n \}$ skrives den symmetriske gruppe $S_n$.\\
-Ordenen af $|S_n| = n!$.
 \subsection*{Diedergruppen af orden 2n}
 Diedergruppen af orden $2n$ skrives $D_{2n}$.\\
 For alle $n \geq 3$, lad $D_{2n}$ være sættet af symmetrier af en $n$-gon.\\
@@ -63,33 +58,85 @@ Ordenen af diedergruppen er $|D_{2n}| = 2n$.\\
 $r s = s r^{-1}$.\\
 $r^i s = s r^{-i}$.\\
 Diedergruppen kan også beskrives ved generatoren: $D_{2n} = \langle r, s | r^n = s^2 = 1, rs = s r^{-1} \rangle$.
-\subsection*{Matrixgrupper}
+\subsection*{Symmetriske grupper}
+Lad $\Omega$ være en ikke-tom mængde og lad $S_{\Omega}$ være en mængde af alle bijektioner fra $\Omega$ til sig selv. $S_{\Omega}$ kaldes den symmetriske gruppe af mængden $\Omega$. $S_{\Omega}$ indeholder alle permutationer af $\Omega$.\\
+I specialtilfældet $\Omega = \{ 1,2,3, \hdots, n \}$ skrives den symmetriske gruppe $S_n$.\\
+Ordenen af $|S_n| = n!$.\\
+En cykel svarer til en lige permutation, hvis den har et ulige antal (og omvendt).
 \subsection*{Den alternerende gruppe}
-\subsection*{Kvaterniongruppen Q8}
+\textit{Den alternerende gruppe} er en gruppe af alle lige permutationer af et endeligt sæt. Den alternerende gruppe af $\{ 1,2,3 \hdots, n \}$ kaldes den alternerende gruppe af grad $n$ (b$A_n$).\\
+Den alternerende gruppe har orden $|A_n| = \frac{n!}{2}$.
 \subsection*{Kleins 4-gruppe}
+\subsection*{Matrixgrupper}
+\subsection*{Kvaterniongruppen Q8}
 2.5
 \subsection*{Homomorphier}
+\textbf{Definition.}\\
+Lad $G$ og $G$ være grupper. En afbildning $\phi : G \to H$ sådan at
+$$\phi(xy) = \phi(x) \phi(y), \forall{x,y} \in G$$
+er en homomorfi.
+
 \subsection*{Isomorphier}
+\textbf{Definition.}\\
+Afbildningen $\phi : G \to H$
+
+
 \subsection*{Gruppevirkninger}
-
-
+\textbf{Definition.}\\
+En gruppevirkning af en gruppe $G$ på en mængde $A$ er givet ved en afbildning $G \times A \to A$, der opfylder følgende:\\
+\begin{enumerate}
+  \item $g_1 \cdot (g_2 \cdot a) = (g_1 g_2) \cdot a$\\
+  \item $1 \cdot a = a$.
+\end{enumerate}
+En gruppevirkning er altså, at for hvert element $g \in G$ fåes en permutation af mængden $A$.
 \section*{Undergrupper}
+
 \subsection*{Definition}
+Lad $H$ og $G$ være grupper. $H$ er en undergruppe af $G$, skrives$H \leq G$, hvis $H$ er en ikke-tom delmængde af $G$. $H$ er lukket under komposition og inversdannelse.
+
+
+
 \subsection*{Undergruppekriteriet}
+
+$H$ er en undergruppe af $g$ hvis og kun hvis:
+\begin{enumerate}
+  \item $H \neq \emptyset$\\
+  \item for alle $x, y \in H, x y^{-1} \in H$
+\end{enumerate}
+
 \subsection*{Centralisator}
+\textbf{Definition}:\\
+$$C_G(A) = \{ g \in G | g a g^{-1} = a,  \forall{a} \in A \}$$
+
+Altså er centralisatoren en delmængde af $G$, der kommuterer med alle elementer i $A$.
+
 \subsection*{Normalisator}
+
+
 \subsection*{Stabilisator}
+
+
 \subsection*{Kernen}
+
+
 \subsection*{Centrum}
+
+
 \subsection*{Stabilisatorer og kerner af gruppevirkninger}
+
+
 \subsection*{Undergruppe frembragt af en delmængde}
 
+
 \section*{Cykliske grupper og undergrupper}
-\subsection*{Def}
+\subsection*{Definition}
+
+
 \subsection*{Orden}
 
 \section*{Kvotientgrupper}
 \subsection*{Kernen}
+
 \subsection*{Normale undergrupper}
 \textbf{Definition 2}:\\
 En undergruppe $N$ af $G$ kaldes normal, og vi skriver $N \trianglelefteq G$, hvis vi for alle $g \in G$ har, at\\
@@ -110,7 +157,9 @@ $$uN \cdot vN := (uv)N$$
 for $u, v \in G$ en veldefineret komposition, og $G / N$ er en gruppe med denne komposition. Det neutrale element i $G / N$ er sideklassen $N$, og det inverse element til en sideklasse $gN$ er sideklassen $g^{-1} N$. $G / N$ med denne komposition kaldes kvotientgruppen eller gaktorgruppen af $G$ modulo $N$.\\
 
 \subsection*{Noget med konjugation}
+
 \subsection*{Lagrange}
+
 \subsection*{Isomorfisætninger}
 
 \section*{Direkte produkter og abelske grupper}
