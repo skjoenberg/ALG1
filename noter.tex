@@ -85,10 +85,28 @@ Afbildningen $\phi : G \to H$
 \textbf{Definition.}\\
 En gruppevirkning af en gruppe $G$ på en mængde $A$ er givet ved en afbildning $G \times A \to A$, der opfylder følgende:\\
 \begin{enumerate}
-  \item $g_1 \cdot (g_2 \cdot a) = (g_1 g_2) \cdot a$\\
-  \item $1 \cdot a = a$.
+  \item $\pi(g_1) \cdot \pi(g_2) \cdot a = \pi(g_1 g_2) \cdot a$\\
+  \item $\pi(1) \cdot a = a$.
 \end{enumerate}
-En gruppevirkning er altså, at for hvert element $g \in G$ fåes en permutation af mængden $A$.
+En gruppevirkning er altså, at for hvert element $g \in G$ fåes en permutation af mængden $A$.\\
+En gruppevirkning kan også ses som en homomorfi $\pi : G \to bij(x,x)$.\\
+En gruppevirkning er en ækvivalens relation på $A$.\\
+$$x \sim y \iff \exists{g \in G} \text{ sådan at } \pi(g)x = y$$
+
+\subsection*{Baner}
+Da en gruppevirkning er en ækvivalensrelation, kalder vi dens ækvivalensklasser for baner.\\
+\begin{align*}
+  O_a &= \{ x \in A | a \sim x \}\\
+  &= \{ x \in A | \pi(g)a = x \text{ for et givent } g \in G \}\\
+  &= \{ \pi(g)a | g \in G \}
+\end{align*}
+
+$$A = \bigcup_a O_a$$
+Hvor alle baner er disjunkte.
+
+\subsection*{Stabilisator}
+\textbf{Definition.}\\
+$$Stab_G(x) = \{ g \in G | \pi(G)x = x \}$$
 \section*{Undergrupper}
 
 \subsection*{Definition}
@@ -108,16 +126,23 @@ $H$ er en undergruppe af $g$ hvis og kun hvis:
 \textbf{Definition}:\\
 $$C_G(A) = \{ g \in G | g a g^{-1} = a,  \forall{a} \in A \}$$
 
-Altså er centralisatoren en delmængde af $G$, der kommuterer med alle elementer i $A$.
+Altså er centralisatoren en delmængde af $G$, der kommuterer med alle elementer i $A$.\\
 
 \subsection*{Normalisator}
+\textbf{Definition}:\\
+$$N_G(A) = \{ g \in G | gAg^{-1} = A\}$$
+
+Altså er normalisatoren en delmængde af $G$, der laver en afbildning af $A$ over i sig selv.\\
+
+Den primære forskel på centralisator og normalisator er, at centralisatoren sender et element over i sig selv, hvorimod normalisatoren sender elementet over i mængden $A$.
 
 
-\subsection*{Stabilisator}
 
 
 \subsection*{Kernen}
+Lad $\phi$ være en homomorfi $\phi : G \to H$. Kernen af $\phi$ er mængden
 
+$$Ker(\phi) = \{ g \in G | \phi(G) = 1 \}$$
 
 \subsection*{Centrum}
 
@@ -135,6 +160,21 @@ Altså er centralisatoren en delmængde af $G$, der kommuterer med alle elemente
 \subsection*{Orden}
 
 \section*{Kvotientgrupper}
+\subsection*{Ækvivalens relationer}
+
+\begin{enumerate}
+  \item Refelksiv $x \sim x$.\\
+  \item Symmetrisk $x \sim y \Rightarrow y \sim x$
+  \item Transitiv $x \sim y, y \sim z \Rightarrow x \sim z$.\\
+\end{enumerate}
+
+En ækvivalens relation $\sim$ på $G$, giver en partition af $G$.\\
+\begin{align*}
+  E_x &= \{ y \in G | x \sim y\}\\
+  \bigcup_x{E_x} &= G\\
+  E_x &= E_y$ \text{ eller } $E_x \cap E_y = \emptyset
+\end{align*}
+
 \subsection*{Kernen}
 
 \subsection*{Normale undergrupper}
