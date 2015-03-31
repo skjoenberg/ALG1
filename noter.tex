@@ -93,20 +93,6 @@ En gruppevirkning kan også ses som en homomorfi $\pi : G \to bij(x,x)$.\\
 En gruppevirkning er en ækvivalens relation på $A$.\\
 $$x \sim y \iff \exists{g \in G} \text{ sådan at } \pi(g)x = y$$
 
-\subsection*{Baner}
-Da en gruppevirkning er en ækvivalensrelation, kalder vi dens ækvivalensklasser for baner.\\
-\begin{align*}
-  O_a &= \{ x \in A | a \sim x \}\\
-  &= \{ x \in A | \pi(g)a = x \text{ for et givent } g \in G \}\\
-  &= \{ \pi(g)a | g \in G \}
-\end{align*}
-
-$$A = \bigcup_a O_a$$
-Hvor alle baner er disjunkte.
-
-\subsection*{Stabilisator}
-\textbf{Definition.}\\
-$$Stab_G(x) = \{ g \in G | \pi(G)x = x \}$$
 \section*{Undergrupper}
 
 \subsection*{Definition}
@@ -151,6 +137,27 @@ $$Ker(\phi) = \{ g \in G | \phi(G) = 1 \}$$
 
 
 \subsection*{Undergruppe frembragt af en delmængde}
+
+
+\subsection*{Baner}
+Da en gruppevirkning er en ækvivalensrelation, kalder vi dens ækvivalensklasser for baner.\\
+\begin{align*}
+  O_a &= \{ x \in A | a \sim x \}\\
+  &= \{ x \in A | \pi(g)a = x \text{ for et givent } g \in G \}\\
+  &= \{ \pi(g)a | g \in G \}
+\end{align*}
+
+$$A = \bigcup_a O_a$$
+Hvor alle baner er disjunkte.
+
+\subsection*{Stabilisator}
+\textbf{Definition.}\\
+$$Stab_G(x) = \{ g \in G | \pi(G)x = x \}$$
+Stabilisator undergruppen af x i G.\\
+Denne undergruppe er ikke nødvendigvis normal.
+
+Vi ved fra Lagrange, at følgende gælder:\\
+$$|O_x| = [G : Stab_G(x)] = |G| / |Stab_G(x)|$$
 
 
 \section*{Cykliske grupper og undergrupper}
