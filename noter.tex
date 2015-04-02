@@ -8,6 +8,7 @@
 \usepackage{natbib}
 \usepackage{float}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{dsfont}
 \usepackage{pgf}
 \usepackage{tikz}
@@ -17,14 +18,14 @@
 \usepackage{lmodern}
 \usepackage[normalem]{ulem}
 \usetikzlibrary{arrows,automata}
+\setlength{\parindent}{0in}
 
 \pagestyle{fancy}
 \fancyhf{}
 \setlength{\headheight}{2.5em}
 \renewcommand{\headrulewidth}{0pt}
-\fancyhead[R]{Jacob Evald}
+\fancyhead[R]{Sebastian Andersen Algebra 1 (2015)}
 \fancyfoot[C]{page \thepage\ of \pageref{LastPage}}
-
 \begin{document}
 
 \section*{Grupper}
@@ -63,6 +64,7 @@ Lad $\Omega$ være en ikke-tom mængde og lad $S_{\Omega}$ være en mængde af a
 I specialtilfældet $\Omega = \{ 1,2,3, \hdots, n \}$ skrives den symmetriske gruppe $S_n$.\\
 Ordenen af $|S_n| = n!$.\\
 En cykel svarer til en lige permutation, hvis den har et ulige antal (og omvendt).
+
 \subsection*{Den alternerende gruppe}
 \textit{Den alternerende gruppe} er en gruppe af alle lige permutationer af et endeligt sæt. Den alternerende gruppe af $\{ 1,2,3 \hdots, n \}$ kaldes den alternerende gruppe af grad $n$ (b$A_n$).\\
 Den alternerende gruppe har orden $|A_n| = \frac{n!}{2}$.
@@ -78,14 +80,24 @@ er en homomorfi.
 
 \subsection*{Isomorphier}
 \textbf{Definition.}\\
-Afbildningen $\phi : G \to H$
+Afbildningen $\phi : G \to H$ er en isomorfi, hvis følgende er opfyldt:
+\begin{enumerate}
+  \item $\phi$ er en homomorfi.
+%  \item $|G| = |H|$ (lige mange elemter).\\
+  \item $\phi$ er bijektive (injektiv og surjektiv).
+\end{enumerate}
 
+Hvis der findes en isomorfi mellem $G$ og $H$, siges det, at $G$ er isomorf med $H$ ($G \simeq H$).\\
+$$\phi \text{ er injektiv } \iff Ker(\phi) = \{e\}$$
+Injektivitet kan også vises ved $\phi(x) = \phi(y) \iff x = y$.
+
+$$G / Ker(\phi) = H$$
 
 \subsection*{Gruppevirkninger}
 \textbf{Definition.}\\
 En gruppevirkning af en gruppe $G$ på en mængde $A$ er givet ved en afbildning $G \times A \to A$, der opfylder følgende:\\
 \begin{enumerate}
-  \item $\pi(g_1) \cdot \pi(g_2) \cdot a = \pi(g_1 g_2) \cdot a$\\
+  \item $\pi(g_1) \cdot \pi(g_2) \cdot a = \pi(g_1 g_2) \cdot a$
   \item $\pi(1) \cdot a = a$.
 \end{enumerate}
 En gruppevirkning er altså, at for hvert element $g \in G$ fåes en permutation af mængden $A$.\\
@@ -98,53 +110,43 @@ $$x \sim y \iff \exists{g \in G} \text{ sådan at } \pi(g)x = y$$
 \subsection*{Definition}
 Lad $H$ og $G$ være grupper. $H$ er en undergruppe af $G$, skrives$H \leq G$, hvis $H$ er en ikke-tom delmængde af $G$. $H$ er lukket under komposition og inversdannelse.
 
-
-
 \subsection*{Undergruppekriteriet}
-
 $H$ er en undergruppe af $g$ hvis og kun hvis:
 \begin{enumerate}
-  \item $H \neq \emptyset$\\
+  \item $H \neq \emptyset$
   \item for alle $x, y \in H, x y^{-1} \in H$
 \end{enumerate}
 
 \subsection*{Centralisator}
 \textbf{Definition}:\\
-$$C_G(A) = \{ g \in G | g a g^{-1} = a,  \forall{a} \in A \}$$
-
+$$C_G(A) = \{ g \in G \mid g a g^{-1} = a,  \forall{a} \in A \}$$
 Altså er centralisatoren en delmængde af $G$, der kommuterer med alle elementer i $A$.\\
 
 \subsection*{Normalisator}
 \textbf{Definition}:\\
-$$N_G(A) = \{ g \in G | gAg^{-1} = A\}$$
+$$N_G(A) = \{ g \in G \mid gAg^{-1} = A\}$$
 
 Altså er normalisatoren en delmængde af $G$, der laver en afbildning af $A$ over i sig selv.\\
 
 Den primære forskel på centralisator og normalisator er, at centralisatoren sender et element over i sig selv, hvorimod normalisatoren sender elementet over i mængden $A$.
 
-
-
-
 \subsection*{Kernen}
 Lad $\phi$ være en homomorfi $\phi : G \to H$. Kernen af $\phi$ er mængden
 
-$$Ker(\phi) = \{ g \in G | \phi(G) = 1 \}$$
+$$Ker(\phi) = \{ g \in G \mid \phi(G) = 1 \}$$
 
 \subsection*{Centrum}
 
-
 \subsection*{Stabilisatorer og kerner af gruppevirkninger}
 
-
 \subsection*{Undergruppe frembragt af en delmængde}
-
 
 \subsection*{Baner}
 Da en gruppevirkning er en ækvivalensrelation, kalder vi dens ækvivalensklasser for baner.\\
 \begin{align*}
-  O_a &= \{ x \in A | a \sim x \}\\
-  &= \{ x \in A | \pi(g)a = x \text{ for et givent } g \in G \}\\
-  &= \{ \pi(g)a | g \in G \}
+  O_a &= \{ x \in A \mid a \sim x \}\\
+  &= \{ x \in A \mid \pi(g)a = x \text{ for et givent } g \in G \}\\
+  &= \{ \pi(g)a \mid g \in G \}
 \end{align*}
 
 $$A = \bigcup_a O_a$$
@@ -152,13 +154,16 @@ Hvor alle baner er disjunkte.
 
 \subsection*{Stabilisator}
 \textbf{Definition.}\\
-$$Stab_G(x) = \{ g \in G | \pi(G)x = x \}$$
+$$Stab_G(x) = \{ g \in G \mid \pi(G)x = x \}$$
 Stabilisator undergruppen af x i G.\\
 Denne undergruppe er ikke nødvendigvis normal.
 
 Vi ved fra Lagrange, at følgende gælder:\\
 $$|O_x| = [G : Stab_G(x)] = |G| / |Stab_G(x)|$$
 
+\subsection*{Cauchys sætning}
+Lad $G$ være en gruppe med endelig orden og lad $p$ være et primtal.\\
+Hvis $p \mid |G|$, så $\exists{x \in G}$, sådan at $|x| = p$.
 
 \section*{Cykliske grupper og undergrupper}
 \subsection*{Definition}
@@ -170,16 +175,16 @@ $$|O_x| = [G : Stab_G(x)] = |G| / |Stab_G(x)|$$
 \subsection*{Ækvivalens relationer}
 
 \begin{enumerate}
-  \item Refelksiv $x \sim x$.\\
+  \item Refelksiv $x \sim x$.
   \item Symmetrisk $x \sim y \Rightarrow y \sim x$
-  \item Transitiv $x \sim y, y \sim z \Rightarrow x \sim z$.\\
+  \item Transitiv $x \sim y, y \sim z \Rightarrow x \sim z$.
 \end{enumerate}
 
 En ækvivalens relation $\sim$ på $G$, giver en partition af $G$.\\
 \begin{align*}
-  E_x &= \{ y \in G | x \sim y\}\\
+  E_x &= \{ y \in G \mid x \sim y\}\\
   \bigcup_x{E_x} &= G\\
-  E_x &= E_y$ \text{ eller } $E_x \cap E_y = \emptyset
+  E_x &= E_y \text{ eller } E_x \cap E_y = \emptyset
 \end{align*}
 
 \subsection*{Kernen}
@@ -187,11 +192,11 @@ En ækvivalens relation $\sim$ på $G$, giver en partition af $G$.\\
 \subsection*{Normale undergrupper}
 \textbf{Definition 2}:\\
 En undergruppe $N$ af $G$ kaldes normal, og vi skriver $N \trianglelefteq G$, hvis vi for alle $g \in G$ har, at\\
-$$gNg^{-1} := \{ gng^{-1} | n \in N \} = N.$$
+$$gNg^{-1} := \{ gng^{-1} \mid n \in N \} = N.$$
 \subsection*{Sideklasser}
 \textbf{Definition 1}:\\
 Lad $H \leq G$. For $g \in G$ defineres venstresideklassen af $H$ i $G$:\\
-$$gH = \{ gh | h \in H \}.$$
+$$gH = \{ gh \mid h \in H \}.$$
 \textbf{Proposition 1}:\\
 For $u, v \in G$ haves $uH = vH$ hvis og kun hvis $v^{-1} u \in H$ hvis og kun hvis $u$ og $v$ begge er repræsentanter for samme venstresideklasse.\\
 Mængden af venstresideklasser i $G$ udgør en partition af $G$:\\
@@ -199,7 +204,7 @@ $$G = \bigcup_{g \in G} gH.$$\\
 og for vilkårlige $u, v \in G$ gælder enten $uH \cap vH = \emptyset$ eller $uH = vH$.
 \subsection*{Kvotientgrupper}
 \textbf{Sætning 1}:\\
-Lad $N \trianglelefteq G$ og betraft mængden af venstresideklasser af $N$ i $G$. Denne mængde betegner vi $G / N$ (læses: "G module N"). På $G / N$ giver fastsættelsen
+Lad $N \trianglelefteq G$ og betragt mængden af venstresideklasser af $N$ i $G$. Denne mængde betegner vi $G / N$ (læses: "G module N"). På $G / N$ giver fastsættelsen
 $$uN \cdot vN := (uv)N$$
 for $u, v \in G$ en veldefineret komposition, og $G / N$ er en gruppe med denne komposition. Det neutrale element i $G / N$ er sideklassen $N$, og det inverse element til en sideklasse $gN$ er sideklassen $g^{-1} N$. $G / N$ med denne komposition kaldes kvotientgruppen eller gaktorgruppen af $G$ modulo $N$.\\
 
@@ -211,8 +216,16 @@ for $u, v \in G$ en veldefineret komposition, og $G / N$ er en gruppe med denne 
 
 \section*{Direkte produkter og abelske grupper}
 \subsection*{Def}
-\subsection*{Endeligt frembragte abelske grupper}
+\subsection*{Struktursætningen for endeligt frembragte abelske grupper}
+
+Lad være $G$ en endelig abelsk gruppe.\\
+$G \cong Z_{n_1} \times \hdots \times Z_{n_k}$, hvor $n_1 \geq 2, n_i \mid n_{i+1}$.
+\textbf{Korollar.}\\
+Lad $G$ være en endelig abelsk gruppe. Isomorfi-klassen af $G$ er givet ud fra dens liste af cykliske grupper.\\
+Altså vil to endelige abelske grupper kun være isomorfe, hvis de er frembragt af de samme cykliske grupper.
+
 \subsection*{Elementardivisorer}
+
 \subsection*{Invariante faktorer}
 
 \section*{Gruppevirkninger}
@@ -223,6 +236,18 @@ for $u, v \in G$ en veldefineret komposition, og $G / N$ er en gruppe med denne 
 \subsection*{Noget med konjugation}
 \subsection*{Klasseligning}
 \subsection*{Sylows sætninger}
+\textbf{Sætning 1.}\\
+Lad $p$ være en primfactor med multiplicitet $n$ af ordenen af en endelig gruppe $G$. Så vil der eksistere en sylow p-undergruppe med orden $p^n$.
 
+\textbf{Sætning 2.}\\
+Givet en gruppe $G$ og et primtal $p$, vil alle sylow $p$-undergruppe vil være congruente. Dvs. hvis $H$ og $K$ er sylow $p$-undergrupper af $G$, så vil $\exists{g \in G}$ så $gHg^{-1} = K$.
+
+\textbf{Sætning 3.}\\
+Lad $p$ være en primfactor med multiplicitet $n$ af ordenen af en endelig gruppe $G$, så $|G| = p^n m$, hvor $n \geq 0, p \not{\mid} m$. Lad $n_p$ være antallet af sylow $p$-undergrupper af $G$.
+\begin{enumerate}
+  \item $n_p \mid m$
+  \item $n_p \equiv 1 (\text{mod } p)$
+  \item $n_p = [G : N_G(P)]$
+\end{enumerate}
 
 \end{document}
